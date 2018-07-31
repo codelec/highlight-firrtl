@@ -115,13 +115,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>`.+?`</string>
-					<key>name</key>
-					<string>variable.other.quoted-identifier.firrtl</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>[a-zA-Z_][a-zA-Z0-9_]*</string>
+					<string>(?&lt;=(node ))[A-Za-z0-9_]+|(?&lt;=(module ))[A-Za-z0-9_]+|(?&lt;=(reg ))[A-Za-z0-9_]+|(?&lt;=(wire ))[A-Za-z0-9_]+|(?&lt;=inst )[A-Za-z0-9_]+</string>
 					<key>name</key>
 					<string>variable.other.identifier.firrtl</string>
 				</dict>
@@ -133,7 +127,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\s*\b(skip|wire|infer|read|write|rdwr|mport|output|input|cmem|smem|when|else|node|flip|(^\W*inst))\b</string>
+					<string>\s*\b(skip|wire|infer|read|write|rdwr|mport|output|input|cmem|smem|when|else|node|flip)\b</string>
 					<key>name</key>
 					<string>keyword.firrtl</string>
 				</dict>
